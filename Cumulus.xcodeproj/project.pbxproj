@@ -7,13 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		383F92C122C54EF3961D52FB /* libPods-Cumulus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B79A09FBCEF54E5BBA7EF9FD /* libPods-Cumulus.a */; };
+		C624E5231947E8F300034D0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6ABAA01194565CD00B9C6D5 /* Main.storyboard */; };
 		C6ABA9F7194565CD00B9C6D5 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ABA9F6194565CD00B9C6D5 /* main.swift */; };
-		C6ABA9F9194565CD00B9C6D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ABA9F8194565CD00B9C6D5 /* ViewController.swift */; };
+		C6ABA9F9194565CD00B9C6D5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ABA9F8194565CD00B9C6D5 /* MainViewController.swift */; };
 		C6ABA9FB194565CD00B9C6D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ABA9FA194565CD00B9C6D5 /* AppDelegate.swift */; };
 		C6ABA9FE194565CD00B9C6D5 /* Cumulus.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C6ABA9FC194565CD00B9C6D5 /* Cumulus.xcdatamodeld */; };
 		C6ABAA00194565CD00B9C6D5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6ABA9FF194565CD00B9C6D5 /* Images.xcassets */; };
-		C6ABAA03194565CD00B9C6D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6ABAA01194565CD00B9C6D5 /* Main.storyboard */; };
 		C6ABAA0F194565CD00B9C6D5 /* CumulusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ABAA0E194565CD00B9C6D5 /* CumulusTests.swift */; };
+		C6C0C3A319482E4900DF8596 /* AFSoundCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C0C3A219482E4900DF8596 /* AFSoundCloud.swift */; };
+		C6CDA4051946B1570034C52A /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CDA4041946B1570034C52A /* Song.swift */; };
+		C6CDA4081946B6730034C52A /* SoundCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CDA4071946B6730034C52A /* SoundCloud.swift */; };
+		C6CDA40A1946CB5F0034C52A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CDA4091946CB5F0034C52A /* LoginViewController.swift */; };
+		C6EC833919469DB7005D39E1 /* Popular.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EC833819469DB7005D39E1 /* Popular.swift */; };
+		C6EC833B19469DE3005D39E1 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EC833A19469DE3005D39E1 /* Collection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,10 +34,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5AC53DDCA3E54E38B7C5D595 /* Pods-Cumulus.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cumulus.xcconfig"; path = "Pods/Pods-Cumulus.xcconfig"; sourceTree = "<group>"; };
+		B79A09FBCEF54E5BBA7EF9FD /* libPods-Cumulus.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Cumulus.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6092201194569BC00A8E86A /* libPods-Cumulus-RestKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Cumulus-RestKit.a"; path = "../../../Library/Developer/Xcode/DerivedData/Cumulus-hhpntohbgirnopcvqttkekbkslnc/Build/Products/Debug/libPods-Cumulus-RestKit.a"; sourceTree = "<group>"; };
+		C65D8CAC194597D4002DB744 /* Cumulus-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cumulus-Bridging-Header.h"; sourceTree = "<group>"; };
 		C6ABA9F1194565CD00B9C6D5 /* Cumulus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cumulus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6ABA9F5194565CD00B9C6D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6ABA9F6194565CD00B9C6D5 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		C6ABA9F8194565CD00B9C6D5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C6ABA9F8194565CD00B9C6D5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		C6ABA9FA194565CD00B9C6D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6ABA9FD194565CD00B9C6D5 /* Cumulus.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Cumulus.xcdatamodel; sourceTree = "<group>"; };
 		C6ABA9FF194565CD00B9C6D5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -38,6 +49,12 @@
 		C6ABAA08194565CD00B9C6D5 /* CumulusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CumulusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6ABAA0D194565CD00B9C6D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6ABAA0E194565CD00B9C6D5 /* CumulusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CumulusTests.swift; sourceTree = "<group>"; };
+		C6C0C3A219482E4900DF8596 /* AFSoundCloud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFSoundCloud.swift; sourceTree = "<group>"; };
+		C6CDA4041946B1570034C52A /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		C6CDA4071946B6730034C52A /* SoundCloud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundCloud.swift; sourceTree = "<group>"; };
+		C6CDA4091946CB5F0034C52A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C6EC833819469DB7005D39E1 /* Popular.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Popular.swift; sourceTree = "<group>"; };
+		C6EC833A19469DE3005D39E1 /* Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				383F92C122C54EF3961D52FB /* libPods-Cumulus.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,12 +76,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4AFB7D17912A4F36A1BF95E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C6092201194569BC00A8E86A /* libPods-Cumulus-RestKit.a */,
+				B79A09FBCEF54E5BBA7EF9FD /* libPods-Cumulus.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C6ABA9E8194565CD00B9C6D5 = {
 			isa = PBXGroup;
 			children = (
 				C6ABA9F3194565CD00B9C6D5 /* Cumulus */,
 				C6ABAA0B194565CD00B9C6D5 /* CumulusTests */,
 				C6ABA9F2194565CD00B9C6D5 /* Products */,
+				5AC53DDCA3E54E38B7C5D595 /* Pods-Cumulus.xcconfig */,
+				4AFB7D17912A4F36A1BF95E6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,12 +108,16 @@
 		C6ABA9F3194565CD00B9C6D5 /* Cumulus */ = {
 			isa = PBXGroup;
 			children = (
-				C6ABA9F8194565CD00B9C6D5 /* ViewController.swift */,
+				C6C0C3A1194829E400DF8596 /* Config */,
+				C6CDA4061946B1710034C52A /* Views */,
+				C6CDA4031946B14B0034C52A /* Models */,
+				C6CDA4021946B1170034C52A /* Core */,
+				C6EC833719469DA8005D39E1 /* Collections */,
+				C6ABAA18194565E000B9C6D5 /* Controllers */,
 				C6ABA9FA194565CD00B9C6D5 /* AppDelegate.swift */,
-				C6ABA9FF194565CD00B9C6D5 /* Images.xcassets */,
-				C6ABAA01194565CD00B9C6D5 /* Main.storyboard */,
 				C6ABA9FC194565CD00B9C6D5 /* Cumulus.xcdatamodeld */,
 				C6ABA9F4194565CD00B9C6D5 /* Supporting Files */,
+				C65D8CAC194597D4002DB744 /* Cumulus-Bridging-Header.h */,
 			);
 			path = Cumulus;
 			sourceTree = "<group>";
@@ -115,6 +148,57 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C6ABAA18194565E000B9C6D5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C6ABA9F8194565CD00B9C6D5 /* MainViewController.swift */,
+				C6CDA4091946CB5F0034C52A /* LoginViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		C6C0C3A1194829E400DF8596 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
+		C6CDA4021946B1170034C52A /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C6EC833A19469DE3005D39E1 /* Collection.swift */,
+				C6CDA4071946B6730034C52A /* SoundCloud.swift */,
+				C6C0C3A219482E4900DF8596 /* AFSoundCloud.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		C6CDA4031946B14B0034C52A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C6CDA4041946B1570034C52A /* Song.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		C6CDA4061946B1710034C52A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C6ABA9FF194565CD00B9C6D5 /* Images.xcassets */,
+				C6ABAA01194565CD00B9C6D5 /* Main.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		C6EC833719469DA8005D39E1 /* Collections */ = {
+			isa = PBXGroup;
+			children = (
+				C6EC833819469DB7005D39E1 /* Popular.swift */,
+			);
+			name = Collections;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,9 +206,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C6ABAA12194565CD00B9C6D5 /* Build configuration list for PBXNativeTarget "Cumulus" */;
 			buildPhases = (
+				3D1BC0FBCF90460DBEC402B4 /* Check Pods Manifest.lock */,
 				C6ABA9ED194565CD00B9C6D5 /* Sources */,
 				C6ABA9EE194565CD00B9C6D5 /* Frameworks */,
 				C6ABA9EF194565CD00B9C6D5 /* Resources */,
+				8627C0C14016475BBC9D0BD4 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -195,8 +281,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C624E5231947E8F300034D0B /* Main.storyboard in Resources */,
 				C6ABAA00194565CD00B9C6D5 /* Images.xcassets in Resources */,
-				C6ABAA03194565CD00B9C6D5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,15 +295,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3D1BC0FBCF90460DBEC402B4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8627C0C14016475BBC9D0BD4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-Cumulus-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C6ABA9ED194565CD00B9C6D5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6CDA40A1946CB5F0034C52A /* LoginViewController.swift in Sources */,
+				C6CDA4051946B1570034C52A /* Song.swift in Sources */,
 				C6ABA9FB194565CD00B9C6D5 /* AppDelegate.swift in Sources */,
-				C6ABA9F9194565CD00B9C6D5 /* ViewController.swift in Sources */,
+				C6ABA9F9194565CD00B9C6D5 /* MainViewController.swift in Sources */,
+				C6C0C3A319482E4900DF8596 /* AFSoundCloud.swift in Sources */,
+				C6CDA4081946B6730034C52A /* SoundCloud.swift in Sources */,
 				C6ABA9FE194565CD00B9C6D5 /* Cumulus.xcdatamodeld in Sources */,
 				C6ABA9F7194565CD00B9C6D5 /* main.swift in Sources */,
+				C6EC833B19469DE3005D39E1 /* Collection.swift in Sources */,
+				C6EC833919469DB7005D39E1 /* Popular.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,23 +455,35 @@
 		};
 		C6ABAA13194565CD00B9C6D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AC53DDCA3E54E38B7C5D595 /* Pods-Cumulus.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Cumulus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Cumulus-hhpntohbgirnopcvqttkekbkslnc/Build/Products/Debug",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Cumulus/Cumulus-Bridging-Header.h";
 			};
 			name = Debug;
 		};
 		C6ABAA14194565CD00B9C6D5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AC53DDCA3E54E38B7C5D595 /* Pods-Cumulus.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Cumulus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Cumulus-hhpntohbgirnopcvqttkekbkslnc/Build/Products/Debug",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Cumulus/Cumulus-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -407,6 +544,7 @@
 				C6ABAA14194565CD00B9C6D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C6ABAA15194565CD00B9C6D5 /* Build configuration list for PBXNativeTarget "CumulusTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +553,7 @@
 				C6ABAA17194565CD00B9C6D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

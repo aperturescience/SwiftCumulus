@@ -9,17 +9,68 @@
 import Cocoa
 
 class AppDelegate: NSObject, NSApplicationDelegate {
-                            
+	
+	func handleGetURLEvent(event: NSAppleEventDescriptor, withReplyEvent: NSAppleEventDescriptor) {
+		
+		var url: String = event.paramDescriptorForKeyword(AEKeyword(keyDirectObject)).stringValue
+		
+		if url.bridgeToObjectiveC().containsString("oauth/callback") {
+			var code: String = getCodeFromOAuthCallback(url)
+			CUSoundCloud().requestToken(code)
+		}
 
+	}
+	
+	func getCodeFromOAuthCallback(callbackString: String) -> String {
+		
+		var url = NSURL(string: callbackString)
+		var elem = Dictionary<String, String>()
+		
+		for param: String in url.query.componentsSeparatedByString("?") {
+			var elems = param.componentsSeparatedByString("=")
+			elem[elems[0]] = elems[1]
+		}
+		
+		return elem["code"]!
+		
+	}
+	
+	func registerScheme() {
+		
+		var appleEventManager:NSAppleEventManager = NSAppleEventManager.sharedAppleEventManager()
+		appleEventManager.setEventHandler(self,
+			andSelector: Selector("handleGetURLEvent:withReplyEvent:"),
+			forEventClass: AEEventClass(kInternetEventClass),
+			andEventID: AEEventID(kAEGetURL))
+		
+	}
 
 	func applicationDidFinishLaunching(aNotification: NSNotification?) {
-		// Insert code here to initialize your application
+		
 	}
 
 	func applicationWillTerminate(aNotification: NSNotification?) {
 		// Insert code here to tear down your application
 	}
-
+	
+	func applicationWillFinishLaunching(aNotification: NSNotification?) {
+		
+		var clientId			= CUSoundCloud().clientId
+		var clientSecret	= CUSoundCloud().clientSecret
+		var redirectUri		= NSURL(string: CUSoundCloud().redirectUri)
+		var authUri				= NSURL(string: "https://soundcloud.com/connect?client_id=\(clientId)&redirect_uri=\(redirectUri)&display=popup&response_type=code_and_token&scope=non-expiring")
+		
+		NXOAuth2AccountStore.sharedStore().setClientID(
+			clientId,
+			secret: clientSecret,
+			authorizationURL: authUri,
+			tokenURL: authUri,
+			redirectURL: redirectUri,
+			forAccountType: "SoundCloud")
+		
+		registerScheme()
+	}
+	
 	@IBAction func saveAction(sender: AnyObject) {
 	    // Performs the save action for the application, which is to send the save: message to the application's managed object context. Any encountered errors are presented to the user.
 	    var error: NSError? = nil

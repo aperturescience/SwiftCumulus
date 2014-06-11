@@ -8,14 +8,17 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
+class MainViewController: NSViewController {
                             
 	override func viewDidLoad() {
+		
 		super.viewDidLoad()
+		
 
-		// Do any additional setup after loading the view.
-		                            
+//	loadPopular()
+		
 	}
+	
 
 	override var representedObject: AnyObject? {
 		didSet {
@@ -23,7 +26,18 @@ class ViewController: NSViewController {
 		}
 		                            
 	}
+	
+	func loadPopular() {
+		PopularCollection().getAll(popularDidLoad, failure: popularDidNotLoad)
+	}
+	
+	func popularDidLoad(op: AFHTTPRequestOperation!, data: AnyObject!) -> Void {
+		println(data)
+	}
 
+	func popularDidNotLoad(op: AFHTTPRequestOperation!, error: NSError!) -> Void {
+		println("Error: \(error)")
+	}
 
 }
 
