@@ -9,6 +9,8 @@
 import Foundation
 import Cocoa
 
+import WebKit
+
 class LoginViewController: NSViewController {
 	
 	override func viewDidLoad() {
@@ -19,8 +21,18 @@ class LoginViewController: NSViewController {
 		requestLogin()
 	}
 	
+	@IBOutlet var connectWebView : WebView
+	
 	func requestLogin() {
-		NXOAuth2AccountStore.sharedStore().requestAccessToAccountWithType("SoundCloud")
+		
+		NXOAuth2AccountStore.sharedStore().requestAccessToAccountWithType("SoundCloud",
+			withPreparedAuthorizationURLHandler: loadConnectView)
+		
+	}
+	
+	func loadConnectView(url: NSURL!) {
+		connectWebView.mainFrame.loadRequest(NSURLRequest(URL: url))
+		connectWebView.hidden = false
 	}
 	
 }

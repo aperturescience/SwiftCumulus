@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="14A238x" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="akA-Zl-RnX">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6154.17"/>
+        <plugIn identifier="com.apple.WebKitIBPlugin" version="6154.17"/>
     </dependencies>
     <scenes>
         <!--Window Controller - Window-->
@@ -61,8 +62,15 @@
                                     <action selector="doLogin:" target="akA-Zl-RnX" id="chC-NC-M5b"/>
                                 </connections>
                             </button>
+                            <webView hidden="YES" appearanceType="aqua" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RPP-Gl-AsJ">
+                                <rect key="frame" x="0.0" y="0.0" width="345" height="500"/>
+                                <webPreferences key="preferences" defaultFontSize="12" defaultFixedFontSize="12" plugInsEnabled="NO" javaEnabled="NO"/>
+                            </webView>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="connectWebView" destination="RPP-Gl-AsJ" id="1RO-b2-yd2"/>
+                    </connections>
                 </viewController>
                 <customObject id="8i9-04-IoS" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

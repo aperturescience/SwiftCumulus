@@ -10,29 +10,41 @@ import Cocoa
 
 class AppDelegate: NSObject, NSApplicationDelegate {
 	
-	func handleGetURLEvent(event: NSAppleEventDescriptor, withReplyEvent: NSAppleEventDescriptor) {
+	func handleGetURLEvent(event: NSAppleEventDescriptor, withReplyEvent: NSAppleEventDescriptor) -> NSError? {
 		
-		var url: String = event.paramDescriptorForKeyword(AEKeyword(keyDirectObject)).stringValue
+		let url: String = event.paramDescriptorForKeyword(AEKeyword(keyDirectObject)).stringValue
 		
-		if url.bridgeToObjectiveC().containsString("oauth/callback") {
-			var code: String = getCodeFromOAuthCallback(url)
-			CUSoundCloud().requestToken(code)
+		println(url)
+		
+		if (url as NSString).containsString("oauth/callback") {
+			
+			if let code = getCodeFromOAuthCallback(url)? {
+				CUSoundCloud().requestToken(code)
+			} else {
+				return NSError(domain: "URLSchemeCallback", code: 401, userInfo: nil)
+			}
+			
 		}
+		
+		return nil
 
 	}
 	
-	func getCodeFromOAuthCallback(callbackString: String) -> String {
+	func getCodeFromOAuthCallback(callbackString: String) -> String? {
 		
-		var url = NSURL(string: callbackString)
+		let url = NSURL(string: callbackString)
 		var elem = Dictionary<String, String>()
 		
-		for param: String in url.query.componentsSeparatedByString("?") {
-			var elems = param.componentsSeparatedByString("=")
+		for param in url.query.componentsSeparatedByString("?") {
+			let elems = param.componentsSeparatedByString("=")
 			elem[elems[0]] = elems[1]
 		}
 		
-		return elem["code"]!
+		if let code = elem["code"]? {
+			return code
+		}
 		
+		return nil
 	}
 	
 	func registerScheme() {
